@@ -1,0 +1,9 @@
+{
+    "Project setup": {
+        "prefix": "NF",
+        "body": [
+          "NF0\n\t\nNF1\n\t\nNF2\n\t\nNF3\n\t"
+        ],
+        "description": "Project setup"
+    } 
+}

@@ -1,0 +1,81 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Normal form",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#ctrl-statements"
+		}
+	],
+	"repository" : {
+		"keywords": {
+			"patterns": [{
+				"match": "\\b(((nf)[0-9]+)|((NF)[0-9]+))\\b",
+				"name": "keyword.control.nf"
+			}]
+		},
+		"strings": {
+			"patterns": [
+				{
+					"begin": "\"",
+					"beginCaptures": {
+						"0": {
+							"name": "string.nf"
+						}
+					},
+					"end": "\"",
+					"name": "string.nf"
+				},
+				{
+					"captures": {
+						"0":{
+							"name": "string.quoted.double.nf"
+						}
+					},
+					"match": "\\(.*\\)"
+				}
+			]
+		},
+		"comments": {			
+			"patterns": [
+				{
+					"begin": "\\/\\/",
+					"beginCaptures": {
+						"0": {
+							"name":"punctuation.definition.comment.nf"
+						}
+					},
+					"end": "\\n",
+					"name": "comment.line.nf"
+				},
+				{
+					"captures": {
+						"0": {
+							"name":"punctuation.definition.comment.nf"
+						}
+					},
+					"begin": "\\/\\*",
+					"end": "\\*\\/",
+					"name":"comment.block.nf"
+				}
+			]
+		},
+		"ctrl-statements": {
+			"patterns": [
+				{
+					"match": "([A-Z]+)",
+					"name":"support.other.variable.nf"
+				}
+			]
+		}
+	},
+	"scopeName": "source.nf"
+}

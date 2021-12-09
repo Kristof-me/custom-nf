@@ -1,0 +1,40 @@
+{
+    "name": "custom-nf",
+    "displayName": "NF",
+    "description": "Dadabase normalization stuff. just as bad as pseudo code ngl",
+    "version": "0.0.1",
+    "icon": "images/nficon.png",
+    "engines": {
+        "vscode": "^1.62.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "main": "./client/extension",
+    "activationEvents": [
+        "onLanguage:nf",
+        "onCommand:myExtension.sayHello"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "nf",
+            "aliases": ["Normal form", "nf"],
+            "extensions": [".txt",".nf"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "nf",
+            "scopeName": "source.nf",
+            "path": "./syntaxes/nf.tmLanguage.json"
+        }],
+        "snippets": [
+            {
+              "language": "nf",
+              "path": "./snippets.json"
+            }
+        ],
+        "capabilities": {
+            "hoverProvider": "true"
+        }
+    }
+}
