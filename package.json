@@ -6,6 +6,7 @@
     "icon": "images/nficon.png",
     "publisher": "Kristof-me",
     "repository": "https://github.com/Kristof-me/custom-nf",
+    "license": "GPL",
     "engines": {
         "vscode": "^1.62.0"
     },
@@ -14,8 +15,7 @@
     ],
     "main": "./client/extension",
     "activationEvents": [
-        "onLanguage:nf",
-        "onCommand:myExtension.sayHello"
+        "onLanguage:nf"
     ],
     "contributes": {
         "languages": [{
