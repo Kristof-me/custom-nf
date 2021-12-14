@@ -4,6 +4,8 @@
     "description": "Dadabase normalization stuff. just as bad as pseudo code ngl",
     "version": "0.0.1",
     "icon": "images/nficon.png",
+    "publisher": "Kristof-me",
+    "repository": "https://github.com/Kristof-me/custom-nf",
     "engines": {
         "vscode": "^1.62.0"
     },
